@@ -1,0 +1,18 @@
+spring:
+  application:
+    name: api-gateway
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
+    healthcheck:
+      enabled: true
+  instance:
+    appname: api-gateway
+server:
+  port: 4001
+zuul:
+  routes:
+    req-service:
+      path: /service/req-service/**
+      serviceId: req-service
