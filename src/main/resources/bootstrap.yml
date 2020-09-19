@@ -16,3 +16,6 @@ zuul:
     req-service:
       path: /service/req-service/**
       serviceId: req-service
+    cat-service:
+      path: /service/cat-service/**
+      serviceId: sidecar
